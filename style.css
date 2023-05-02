@@ -48,3 +48,63 @@ p {
     margin: auto;
     border-radius: 30px;
 }
+
+.padre {
+    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 240px 240px;
+    justify-items: center;
+}
+
+.uno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff7671;
+    width: 90%;
+    height: 220px;
+    text-align: center;
+    border-radius: 5px;
+    grid-row: 1/3;
+    margin-top: 10px;
+    position: relative;
+}
+
+.uno i {
+    color: rgb(173, 28, 17);
+    margin: auto;
+    font-size: 5em;
+}
+
+.dos {
+    background-color: #ffbd71;
+    width: 90%;
+    height: 220px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.tres {
+    background-color: #f1ff71;
+    width: 90%;
+    height: 220px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.cuatro {
+    background-color: #9eff71;
+    width: 90%;
+    height: 220px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
