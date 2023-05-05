@@ -2,12 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    background: #1C1C1C;
     font-family: inter;
 }
+
+body {
+    background-color: #1c1c1c;
+}
+
+.navegacion {
+    height: 90px;
+}
+
+.navegacion li {
+    margin: 20px;
+}
+
+.active {
+    background-color: #a72727;
+}
+
+
 
 header {
     width: 100%;
@@ -51,15 +65,18 @@ p {
 
 .padre {
     width: 95%;
+    height: 95%;
     margin: auto;
     margin-top: 5%;
     padding: 20px;
     background-color: #252525;
+    box-shadow: #fff;
     border-radius: 10px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 240px 240px;
+    grid-template-rows: 240px;
     justify-items: center;
+
 }
 
 /* LA LUNA INICIO */
@@ -243,4 +260,8 @@ p {
     font-size: 24px;
 }
 
-/* CARRUSEL */
+.carousel {
+    margin: auto;
+    width: 55%;
+    border-radius: 10px;
+}
