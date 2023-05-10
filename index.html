@@ -5,54 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-qyJQ3EBw3YI5Uh5/m5r5Z5fnOZLz+0mnBpW8vgxSNxhJgEn0CSf2QHtjBZtNOBMe0gGvGjj2Mz8lyT65T7gG/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Carousel Example</title>
     <title>Document</title>
 </head>
 
 <body>
-    <nav class="navegacion">
-        <ul class="nav nav-pills nav-fill">
-            <li>
-                <img src="imagenes/icon.png" alt="Bootstrap" width="80" height="39">
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Planetas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Glaxias</a>
-            </li>
-        </ul>
+    <nav>
+        <div class="links">
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Planetas</a>
+            <a href="#">Galaxias</a>
+        </div>
     </nav>
+    <!---------Inicio Info principal --------->
     <header>
         <h1>☄️Hola ¿Mundo?🪐</h1>
+        <div class="info">
+            <p> Se encontro un planeta llamado <span class="cambio">Proxima B</span>, ubicado en la zona habitable de la
+                estrella más
+                cercana a nuestro sistema solar, <span class="cambio">Próxima Centauri</span>.<br>
+                <span class="cambio">Proxima b </span>es una super-Tierra y
+                orbita su
+                estrella a una distancia que podría
+                permitir la existencia de agua líquida en su superficie. Aunque <span class="cambio">Próxima
+                    Centauri</span>
+                es una
+                <span class="color">enana roja</span> muy
+                activa que emite llamaradas estelares, lo que podría hacer que la vida en <span class="cambio">Proxima
+                    b</span> sea
+                difícil, los
+                científicos creen que aún es un candidato prometedor para la colonización humana en el futuro.
+            </p>
+        </div>
+        <!---------- carrusel ----------->
+        <div id="carouselExampleCaptions" class="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagenes/webb1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Nebulosa de Orión</h5>
+                        <p>Producida utilizando datos previamente publicados de tres telescopios muestra dos
+                            enormescavernas
+                            talladas por estrellas gigantes invisibles que pueden liberar hasta un millón de veces bmás
+                            luz
+                            que nuestro Sol</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/webb2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Galaxia lenticular NGC 3489</h5>
+                        <p>Las galaxias lenticulares no son galaxias espirales o galaxias elípticas. Se encuentran en
+                            algún
+                            punto intermedio, exhibiendo rasgos de ambos. Las galaxias lenticulares tienen una
+                            protuberancia
+                            central de estrellas apretadas y un disco delgado y circular de estrellas, gas y polvo, como
+                            las
+                            galaxias espirales, pero carecen de brazos.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/webb3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dual Quasar</h5>
+                        <p>El brillante resplandor de dos cuásares que residen en los núcleos de dos galaxias que están
+                            en
+                            el caótico proceso de fusión. El tira y afloja gravitacional entre las dos galaxias enciende
+                            una
+                            tormenta de fuego de nacimiento de estrellas.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/webb4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Agujero negro aislado</h5>
+                        <p>Un agujero negro a la deriva a través de nuestra galaxia, la Vía Láctea. El agujero negro es
+                            el
+                            remanente aplastado de una estrella masiva que explotó como una supernova. El núcleo
+                            sobreviviente es varias veces la masa de nuestro Sol. El agujero negro atrapa la luz debido
+                            a su
+                            intenso campo gravitatorio.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div><br>
     </header>
-    <div class="info">
-        <p> Se encontro un planeta llamado <span class="cambio">Proxima b</span>, ubicado en la zona habitable de la
-            estrella más
-            cercana a nuestro sistema solar, <span class="cambio">Próxima Centauri</span>.<br>
-            <span class="cambio">Proxima b </span>es una super-Tierra y
-            orbita su
-            estrella a una distancia que podría
-            permitir la existencia de agua líquida en su superficie. Aunque <span class="cambio">Próxima Centauri</span>
-            es una
-            <span class="color">enana roja</span> muy
-            activa que emite llamaradas estelares, lo que podría hacer que la vida en <span class="cambio">Proxima
-                b</span> sea
-            difícil, los
-            científicos creen que aún es un candidato prometedor para la colonización humana en el futuro.
-        </p>
-    </div>
-    <iframe class="video" width="720" height="360" src="https://www.youtube.com/embed/k1jfGrwSpsI"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-    <!-------------------Cajas----------------------->
+
+    <!--------- Cajas--------->
     <div class="padre">
         <div class="luna">
             <img class="lunaF" src="imagenes/luna.jpg" alt="LA LUNA">
@@ -70,70 +136,8 @@
             <img class="mercurioF" src="imagenes/mercurio.jpg" alt="MERCURIO">
             <div class="textoMercurio">MERCURIO</div>
         </div>
-    </Div><br>
-    <!-- carrusel -->
-    <div id="carouselExampleCaptions" class="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagenes/webb1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Nebulosa de Orión</h5>
-                    <p>Producida utilizando datos previamente publicados de tres telescopios muestra dos enormescavernas
-                        talladas por estrellas gigantes invisibles que pueden liberar hasta un millón de veces bmás luz
-                        que nuestro Sol</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/webb2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Galaxia lenticular NGC 3489</h5>
-                    <p>Las galaxias lenticulares no son galaxias espirales o galaxias elípticas. Se encuentran en algún
-                        punto intermedio, exhibiendo rasgos de ambos. Las galaxias lenticulares tienen una protuberancia
-                        central de estrellas apretadas y un disco delgado y circular de estrellas, gas y polvo, como las
-                        galaxias espirales, pero carecen de brazos.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/webb3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Dual Quasar</h5>
-                    <p>El brillante resplandor de dos cuásares que residen en los núcleos de dos galaxias que están en
-                        el caótico proceso de fusión. El tira y afloja gravitacional entre las dos galaxias enciende una
-                        tormenta de fuego de nacimiento de estrellas.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/webb4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Agujero negro aislado</h5>
-                    <p>Un agujero negro a la deriva a través de nuestra galaxia, la Vía Láctea. El agujero negro es el
-                        remanente aplastado de una estrella masiva que explotó como una supernova. El núcleo
-                        sobreviviente es varias veces la masa de nuestro Sol. El agujero negro atrapa la luz debido a su
-                        intenso campo gravitatorio.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div><br>
+
     <script src="js/bootstrap.min.js"></script>
 </body>
 

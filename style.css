@@ -9,23 +9,47 @@ body {
     background-color: #1c1c1c;
 }
 
-.navegacion {
-    height: 90px;
+/*---------- barra de navegacion ---------- */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background-color: #f2f2f213;
+    padding: 20px;
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 
-.navegacion li {
-    margin: 20px;
+
+.links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.active {
-    background-color: #a72727;
+.links a.active {
+    background-color: #753cd1;
 }
 
+.links a:hover {
+    background-color: #753cd12f;
+}
 
+.links a.active {
+    font-weight: bold;
+}
+
+/* ---------- Info principal ---------- */
 
 header {
     width: 100%;
-    height: 80px;
 }
 
 header h1 {
@@ -57,12 +81,7 @@ p {
     color: #e93535;
 }
 
-.video {
-    display: block;
-    margin: auto;
-    border-radius: 30px;
-}
-
+/* ---------- Seleccion de planetas ---------- */
 .padre {
     width: 95%;
     height: 95%;
@@ -79,7 +98,7 @@ p {
 
 }
 
-/* LA LUNA INICIO */
+/* LA LUNA */
 .luna {
     display: flex;
     align-items: center;
@@ -127,7 +146,7 @@ p {
     font-size: 24px;
 }
 
-/* MARTE INICIO */
+/* MARTE */
 
 .marte {
     width: 90%;
@@ -172,7 +191,7 @@ p {
     font-size: 24px;
 }
 
-/* JUPITER INICIO */
+/* JUPITER */
 .jupiter {
     width: 90%;
     height: 220px;
@@ -216,7 +235,7 @@ p {
     font-size: 24px;
 }
 
-/* MERCURIO INICIO */
+/* MERCURIO */
 .mercurio {
     width: 90%;
     height: 220px;
@@ -260,8 +279,46 @@ p {
     font-size: 24px;
 }
 
-.carousel {
-    margin: auto;
-    width: 55%;
-    border-radius: 10px;
+/* ---------- Carrusel ---------- */
+
+.carousel-container {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    z-index: 1;
 }
+
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    height: 500px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+/*---------- Footer ---------- */
