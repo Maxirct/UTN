@@ -24,7 +24,6 @@ nav {
     border-radius: 20px;
 }
 
-
 .links a {
     margin: 0 10px;
     color: #ffffff;
@@ -47,38 +46,65 @@ nav {
 }
 
 /* ---------- Info principal ---------- */
+header h1 {
+    margin-left: 130px;
+    color: #c6ee36;
+    margin-top: 50px;
+}
 
-header {
+/*---------- Article ---------- */
+article {
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+    width: 80%;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    border-radius: 20px;
+    object-fit: cover;
     width: 100%;
 }
 
-header h1 {
-    font-family: inter black;
-    text-align: center;
-    color: #e0ff71;
-    position: center;
-    margin: 2%;
-}
-
-.info {
+article img:last-child {
+    position: absolute;
+    width: 100%;
+    bottom: 62px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
     margin: auto;
-    width: 80%;
-    text-align: center;
+    transform: translateY(20%);
+    transition: .3S ease;
+    opacity: 0;
 }
 
-p {
-    padding-bottom: 5%;
-    font-family: inter light;
-    color: aliceblue;
+article:hover {
+    transform:
+        perspective(800px) rotateX(2deg);
 }
 
-.cambio {
-    font-family: inter black;
-    color: #e0ff71;
+article::before {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom,
+            transparent 10%,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0)95%);
+    opacity: 0;
+    transition: all .3s ease;
 }
 
-.color {
-    color: #e93535;
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
 }
 
 /* ---------- Seleccion de planetas ---------- */
@@ -320,5 +346,3 @@ p {
 .carousel-button.prev {
     left: 10px;
 }
-
-/*---------- Footer ---------- */
