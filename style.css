@@ -101,69 +101,6 @@ nav {
     font-weight: bold;
 }
 
-/* ---------- Info principal ---------- */
-header h1 {
-    text-align: center;
-    color: #c6ee36;
-    margin-top: 50px;
-}
-
-/*---------- Article ---------- */
-article {
-    margin: auto;
-    overflow: hidden;
-    align-items: center;
-    width: 65%;
-    transition: all .3s ease;
-    margin-bottom: 1.2%;
-}
-
-article img:first-child {
-    border-radius: 20px;
-    object-fit: cover;
-    width: 100%;
-}
-
-article img:last-child {
-    position: absolute;
-    width: 100%;
-    bottom: 10%;
-    border-radius: 20px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    transform: translateY(20%);
-    transition: .3S ease;
-    opacity: 0;
-}
-
-article:hover {
-    transform:
-        perspective(800px) rotateX(2deg);
-}
-
-article::before {
-    position: absolute;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to bottom,
-            transparent 10%,
-            rgba(0, 0, 0, 0.5) 50%,
-            rgba(0, 0, 0)95%);
-    opacity: 0;
-    transition: all .3s ease;
-}
-
-article:hover::before {
-    opacity: 1;
-}
-
-article:hover img:last-child {
-    opacity: 1;
-    transform: translateY(10%);
-}
-
 /* ---------- Carrusel ---------- */
 
 .carousel-container {
@@ -468,7 +405,6 @@ article:hover img:last-child {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -100px;
     margin: 0 auto;
     text-align: center;
     font-family: open sans black;
