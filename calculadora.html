@@ -1,32 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-qyJQ3EBw3YI5Uh5/m5r5Z5fnOZLz+0mnBpW8vgxSNxhJgEn0CSf2QHtjBZtNOBMe0gGvGjj2Mz8lyT65T7gG/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="links">
+            <a href="index.html">Inicio</a>
+            <div class="dropdown">
+                <button class="dropbtn">Planetas &#9662;</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="calculadora.html">Calculadora</a></li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#">Galaxias</a>
+        </div>
+    </nav><br>
+    <!-- FIN NAVBAR -->
+
+    <!-- CALCULADORA -->
     <div class="container">
         <h1 class="tituloCalculadora">Calculadora de distancias planetarias</h1>
         <div class="opciones">
             <div class="cajaDistancia1">
                 <label class="distanciaTitulo1" for="distancia1">Origen:</label>
                 <select class="selectorDistancia1" id="distancia1">
-                    <option value="mars">Marte</option>
-                    <option value="jupiter">Júpiter</option>
-                    <option value="saturn">Saturno</option>
+                    <option value="Marte">Marte</option>
+                    <option value="Jupiter">Júpiter</option>
+                    <option value="Saturno">Saturno</option>
                 </select>
             </div>
             <div class="cajaDistancia2">
                 <label class="distanciaTitulo2" for="distancia2">Destino:</label>
                 <select class="selectorDistancia2" id="distancia2">
-                    <option value="mars">Marte</option>
-                    <option value="jupiter">Júpiter</option>
-                    <option value="saturn">Saturno</option>
+                    <option value="Marte">Marte</option>
+                    <option value="Jupiter">Júpiter</option>
+                    <option value="Saturno">Saturno</option>
                 </select>
             </div>
         </div>
@@ -34,7 +57,7 @@
             <button class="botonReultado" onclick="calcularDistancia()">Calcular distancia</button>
         </div>
         <div class="resultado" id="resultado"></div>
-
+        <!-- FIN CALCULADORA -->
         <script src="script.js"></script>
 </body>
 

@@ -6,17 +6,17 @@ function calcularDistancia() {
 
     if (planet1 === planet2) {
         distancia = 0;
-    } else if (planet1 === "mars" && planet2 === "jupiter") {
+    } else if (planet1 === "Marte" && planet2 === "Jupiter") {
         distancia = 628.743; // Distancia promedio en millones de kilómetros
-    } else if (planet1 === "mars" && planet2 === "saturn") {
+    } else if (planet1 === "Marte" && planet2 === "Saturno") {
         distancia = 1277.59; // Distancia promedio en millones de kilómetros
-    } else if (planet1 === "jupiter" && planet2 === "mars") {
+    } else if (planet1 === "Jupiter" && planet2 === "Marte") {
         distancia = 628.743; // Distancia promedio en millones de kilómetros
-    } else if (planet1 === "jupiter" && planet2 === "saturn") {
+    } else if (planet1 === "Jupiter" && planet2 === "Saturno") {
         distancia = 649.929; // Distancia promedio en millones de kilómetros
-    } else if (planet1 === "saturn" && planet2 === "mars") {
+    } else if (planet1 === "Saturno" && planet2 === "Marte") {
         distancia = 1277.59; // Distancia promedio en millones de kilómetros
-    } else if (planet1 === "saturn" && planet2 === "jupiter") {
+    } else if (planet1 === "Saturno" && planet2 === "Jupiter") {
         distancia = 649.929; // Distancia promedio en millones de kilómetros
     }
 
