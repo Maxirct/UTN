@@ -9,7 +9,7 @@ body {
     background-color: #1c1c1c;
 }
 
-/*---------- barra de navegacion ---------- */
+/*---------------------------------------- barra de navegacion ---------------------------------------- */
 nav {
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ nav {
 }
 
 .links a:hover {
-    background-color: #753cd12f;
+    background-color: #753cd1;
 }
 
 .links a.active {
@@ -68,7 +68,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2ee;
     min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -77,8 +77,13 @@ nav {
 
 .dropdown-content ul {
     list-style-type: none;
-    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0;
+}
+
+.dropdown:hover a:hover {
+    color: #ffffff;
 }
 
 .dropdown-content ul li a {
@@ -90,6 +95,7 @@ nav {
 }
 
 .dropdown:hover .dropdown-content {
+    margin-left: 10px;
     display: block;
 }
 
@@ -101,7 +107,8 @@ nav {
     font-weight: bold;
 }
 
-/* ---------- Carrusel ---------- */
+/* ---------------------------------------- HTML INDEX ---------------------------------------- */
+/*  Carrusel  */
 
 .carousel-container {
     position: relative;
@@ -143,7 +150,7 @@ nav {
     left: 10px;
 }
 
-/* ---------- Seleccion de planetas ---------- */
+/*  Seleccion de planetas  */
 .padre {
     width: 95%;
     height: 95%;
@@ -341,8 +348,8 @@ nav {
     font-size: 24px;
 }
 
+/*---------------------------------------- HTML CALCULADORA ----------------------------------------  */
 /* calucladora */
-
 .container {
     position: relative;
     margin: 50px auto;
@@ -410,4 +417,81 @@ nav {
     font-family: open sans black;
     color: #c6ee36;
     font-size: 1.5rem;
+}
+
+/* ---------------------------------------- HTML PLANETAS ---------------------------------------- */
+.tituloplanetas {
+    margin-top: 5%;
+    font-family: inter black;
+    text-align: center;
+    color: #c6ee36;
+}
+
+.containerglassbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5%;
+}
+
+.glassBox {
+    width: 100%;
+    height: 400px;
+    max-width: 300px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px #b964ff1c;
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: calc(50% - 20px);
+    margin: 3%;
+}
+
+.glassBox,
+.glassBox * {
+    box-sizing: border-box;
+    transition: 400ms;
+}
+
+.glassBox__imgBox img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.glassBox__title {
+    text-align: center;
+    margin-top: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.glassBox__content {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    opacity: 0;
+}
+
+.glassBox:hover .glassBox__imgBox {
+    transform: translateY(-50px);
+}
+
+.glassBox:hover .glassBox__imgBox img {
+    transform: translate(-20px, -40px) rotate(-15deg) scale(1.4);
 }
