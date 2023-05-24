@@ -120,7 +120,6 @@ nav {
 
 /* ---------------------------------------- HTML INDEX ---------------------------------------- */
 /*  Carrusel  */
-
 .carousel-container {
     position: relative;
     height: 500px;
@@ -161,202 +160,239 @@ nav {
     left: 10px;
 }
 
-/*  Seleccion de planetas  */
-.padre {
-    width: 95%;
-    height: 95%;
-    margin: auto;
-    margin-top: 5%;
-    padding: 20px;
-    background-color: #252525;
-    box-shadow: #fff;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 240px;
-    justify-items: center;
+/* Layout  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
+html body * {
+    box-sizing: border-box;
 }
 
-/* LA LUNA */
-.luna {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 220px;
-    text-align: center;
-    border-radius: 5px;
-    grid-row: 1/3;
-    margin-top: 10px;
+.gridywrap div[class*="gridy"] {
+    padding: 15px;
+    float: left;
     position: relative;
+}
+
+.gridywrap .gridy-1,
+.gridywrap .gridy-2,
+.gridywrap .gridy-3 {
+    width: 200px;
     overflow: hidden;
 }
 
-.luna .lunaF {
+.gridywrap .gridy-1 {
+    width: 100%;
+}
+
+.gridywrap .gridy-2 {
+    width: 100%;
+}
+
+.gridywrap .gridy-3 {
+    width: 100%;
+}
+
+.gridywrap .gridyhe-1 {
+    height: 320px;
+}
+
+.gridywrap .gridyhe-2 {
+    height: 320px;
+}
+
+@media screen and (min-width: 640px) {
+    .gridywrap .gridyhe-2 {
+        height: 320px;
+    }
+
+    .gridywrap {
+        width: 100%;
+    }
+
+    .gridywrap .gridy-1 {
+        width: 50%;
+    }
+
+    .gridywrap .gridy-2 {
+        width: 50%;
+    }
+
+    .gridywrap .gridy-3 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .gridywrap .gridy-1 {
+        width: 33.3%;
+    }
+
+    .gridywrap .gridy-2 {
+        width: 66.6%;
+    }
+
+    .gridywrap .gridy-3 {
+        width: 100%;
+    }
+
+    .gridywrap .gridyhe-2 {
+        height: 640px;
+    }
+}
+
+/*Estilo*/
+.gridywrap .gridimg {
+    margin: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+}
+
+.gridywrap .gridimg img {
+    width: 100%;
+}
+
+.gridywrap .gridinfo {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease-out;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.8s;
 }
 
-.luna:hover .lunaF {
-    transform: scale(1.1);
-    filter: brightness(70%);
-}
-
-.textoLuna {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 1;
-    font-size: 18px;
+.gridywrap .gridinfo h3 {
+    font-size: 24px;
     color: #fff;
     font-weight: bold;
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.3s ease-out;
-}
-
-.luna:hover .textoLuna {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    font-size: 24px;
-}
-
-/* MARTE */
-
-.marte {
-    width: 90%;
-    height: 220px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10px;
+    text-transform: uppercase;
+    margin: 130px 0 20px;
     position: relative;
+}
+
+.gridywrap .gridinfo h3:after {
+    content: "";
+    width: 25px;
+    border-top: 4px solid #fff;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.gridywrap .gridinfo .gridmeta {
+    transition-delay: 0.25s;
+}
+
+.gridywrap .gridinfo .gridmeta p {
+    display: inline-block;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.gridywrap .gridinfo .gridmeta p i {
+    margin-right: 5px;
+}
+
+.gridywrap .gridinfo .gridmeta p.gridwho {
+    margin-left: 25px;
+}
+
+.gridywrap .gridinfo p.gridexerpt {
+    width: 60%;
+    margin: 0 auto;
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: #fff;
+    transition-delay: 0.5s;
+}
+
+.gridywrap .gridinfo * {
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.gridywrap .gridinfo h3 {
+    opacity: 1;
+}
+
+.gridywrap .gridinfo .grid-btn {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    display: block;
     overflow: hidden;
 }
 
-.marte .marteF {
-    width: 120%;
-    height: 120%;
-    object-fit: cover;
-    transition: all 0.3s ease-out;
+.gridywrap .gridinfo .grid-btn:hover {
+    width: 75px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
-.marte:hover .marteF {
-    transform: scale(1.1);
-    filter: brightness(70%);
-}
-
-.textoMarte {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 1;
-    font-size: 18px;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
+.gridywrap .gridinfo .grid-btn span {
     opacity: 0;
-    transition: all 0.3s ease-out;
+    display: none;
+    transition: opacity 0.8s;
 }
 
-.marte:hover .textoMarte {
+.gridywrap .gridinfo .grid-btn:hover span {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    font-size: 24px;
+    display: inline;
 }
 
-/* JUPITER */
-.jupiter {
-    width: 90%;
-    height: 220px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.jupiter .jupiterF {
-    width: 120%;
-    height: 120%;
-    object-fit: cover;
-    transition: all 0.3s ease-out;
-}
-
-.jupiter:hover .jupiterF {
-    transform: scale(1.1);
-    filter: brightness(70%);
-}
-
-.textoJupiter {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 1;
-    font-size: 18px;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
+.gridywrap .gridinfo .grid-btn:hover i {
     opacity: 0;
-    transition: all 0.3s ease-out;
+    display: none;
 }
 
-.jupiter:hover .textoJupiter {
+.gridywrap .gridinfo:hover * {
+    opacity: 0.7;
+}
+
+.gridywrap .gridinfo:hover p {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    font-size: 24px;
 }
 
-/* MERCURIO */
-.mercurio {
-    width: 90%;
-    height: 220px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10px;
-    position: relative;
-    overflow: hidden;
+.gridywrap .gridinfo:hover {
+    background: #753cd16c;
 }
 
-.mercurio .mercurioF {
-    width: 120%;
-    height: 120%;
-    object-fit: cover;
-    transition: all 0.3s ease-out;
-}
-
-.mercurio:hover .mercurioF {
-    transform: scale(1.1);
-    filter: brightness(70%);
-}
-
-.textoMercurio {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 1;
-    font-size: 18px;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.3s ease-out;
-}
-
-.mercurio:hover .textoMercurio {
+.gridywrap .gridinfo:hover h3 {
+    margin-top: 70px;
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-    font-size: 24px;
+}
+
+.intro {
+    text-align: center;
+    padding: 25px;
+    color: #ddd;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 300;
+    padding: 15px 0;
+}
+
+.intro p {
+    opacity: 0.5;
+    font-size: 12px;
+}
+
+.intro p a {
+    color: #fa8cd3;
 }
 
 /*---------------------------------------- HTML CALCULADORA ----------------------------------------  */
