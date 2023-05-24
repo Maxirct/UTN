@@ -495,3 +495,24 @@ nav {
 .glassBox:hover .glassBox__imgBox img {
     transform: translate(-20px, -40px) rotate(-15deg) scale(1.4);
 }
+
+.planetas {
+    display: flex;
+    margin: auto;
+    width: 95%;
+    height: 500px;
+}
+
+.planetas img {
+    border-radius: 5px;
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.planetas img:hover {
+    width: 400px;
+    opacity: 1;
+}
