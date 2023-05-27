@@ -7,6 +7,8 @@
 
 body {
     background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
 }
 
 /*---------------------------------------- barra de navegacion ---------------------------------------- */
@@ -31,7 +33,7 @@ nav {
 
 .links a {
     justify-content: center;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     padding: 15px;
     margin: 0 5px;
@@ -66,7 +68,7 @@ nav {
 
 .dropbtn {
     margin: 0 10px;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
@@ -78,7 +80,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f2f2f2ee;
+    background-color: #fff;
     min-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -93,7 +95,7 @@ nav {
 }
 
 .dropdown:hover a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 .dropdown-content ul li a {
@@ -161,10 +163,9 @@ nav {
 }
 
 /* Layout  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
-
-html body * {
-    box-sizing: border-box;
+main {
+    flex: 1;
+    margin-bottom: 20px;
 }
 
 .gridywrap div[class*="gridy"] {
@@ -242,7 +243,6 @@ html body * {
 
 /*Estilo*/
 .gridywrap .gridimg {
-    margin: 5%;
     position: absolute;
     top: 0;
     left: 0;
@@ -286,22 +286,22 @@ html body * {
     margin-top: 25px;
 }
 
-.gridywrap .gridinfo .gridmeta {
+.gridywrap .gridinfo .credito {
     transition-delay: 0.25s;
 }
 
-.gridywrap .gridinfo .gridmeta p {
+.gridywrap .gridinfo .credito p {
     display: inline-block;
     font-size: 13px;
     color: #fff;
     margin-bottom: 15px;
 }
 
-.gridywrap .gridinfo .gridmeta p i {
+.gridywrap .gridinfo .credito p i {
     margin-right: 5px;
 }
 
-.gridywrap .gridinfo .gridmeta p.gridwho {
+.gridywrap .gridinfo .credito p.gridwho {
     margin-left: 25px;
 }
 
@@ -377,7 +377,7 @@ html body * {
 .intro {
     text-align: center;
     padding: 25px;
-    color: #ddd;
+    color: #fff;
 }
 
 h1 {
@@ -437,7 +437,7 @@ h1 {
 .selectorDistancia2 {
     width: 100%;
     padding: 8px;
-    border: 1px solid #cccccc;
+    border: 1px solid #fff;
     border-radius: 4px;
 }
 
@@ -562,4 +562,170 @@ h1 {
 .planetas img:hover {
     width: 400px;
     opacity: 1;
+}
+
+/* ---------------------------------------- HTML INFO NOTICIAS ---------------------------------------- */
+
+.headernoticias {
+    margin: 20px;
+}
+
+.headernoticias img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+h1 {
+    font-family: inter black;
+    color: #c6ee36;
+}
+
+h6 {
+    font-size: 10pt;
+    font-family: inter light;
+    color: #fff;
+}
+
+.importantnoticias {
+    font-family: inter black;
+    margin: auto;
+    font-size: 2vh;
+    width: 50%;
+    color: #be97fd;
+}
+
+.infonoticias {
+    text-align: justify;
+    margin: auto;
+    width: 50%;
+    color: #fff;
+}
+
+.infonoticias span {
+    font-family: inter black;
+    color: rgb(156, 228, 74);
+}
+
+/* ---------------------------------------- BOTON RAMDOM ---------------------------------------- */
+.containerboton {
+    display: flex;
+    justify-content: center;
+}
+
+#randomButton {
+    font-family: inter black;
+    color: #1c1c1c;
+    background-color: #be97fd;
+    width: 100%;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 2vh;
+}
+
+#randomButton:hover {
+    border-radius: 15px;
+    color: #ffffff;
+    background-color: #753cd1;
+    transition: .5s ease;
+}
+
+/*---------------------------------------- FOOTER ----------------------------------------*/
+.footer {
+    text-align: center;
+    height: 350px;
+}
+
+.containerfooter {
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: #000;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer-col {
+    margin-top: 5%;
+    width: 50%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    background-color: #9ce44a;
+    height: 2px;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #ffffffc9;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #753cd1;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #753cd188;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #fff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
 }
