@@ -154,16 +154,15 @@ function calcularDistancia() {
 
     document.getElementById("resultado").innerHTML = 'La distancia calculada es: ' + distancia + ' años luz.';
 }
-/* ---------------------------------------- BOTON BACK ---------------------------------------- */
-
-<button onclick="goBack()">Volver</button>
 /* ---------------------------------------- BOTON RAMDOM ---------------------------------------- */
 document.getElementById("randomButton").addEventListener("click", function () {
     var pages = [
-        "index.html",
-        "calculadora.html",
-        "descubrimientos.html",
-        "planetas.html"
+        "noticiauno.html",
+        "noticiados.html",
+        "noticiatres.html",
+        "noticiacuatro.html",
+        "noticiacinco.html",
+        "noticiaseis.html",
     ];
 
     var randomIndex = Math.floor(Math.random() * pages.length);

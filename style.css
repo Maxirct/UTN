@@ -164,6 +164,8 @@ nav {
 
 /* Layout  */
 main {
+    margin: auto;
+    width: 95%;
     flex: 1;
     margin-bottom: 20px;
 }
@@ -608,6 +610,20 @@ h6 {
     color: rgb(156, 228, 74);
 }
 
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* ---------------------------------------- BOTON RAMDOM ---------------------------------------- */
 .containerboton {
     display: flex;
@@ -634,7 +650,7 @@ h6 {
 /*---------------------------------------- FOOTER ----------------------------------------*/
 .footer {
     text-align: center;
-    height: 350px;
+    height: 300px;
 }
 
 .containerfooter {
@@ -654,7 +670,7 @@ ul {
 }
 
 .footer-col {
-    margin-top: 5%;
+    margin-top: 2%;
     width: 50%;
     padding: 0 15px;
 }
