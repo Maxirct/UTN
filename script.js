@@ -151,7 +151,6 @@ function calcularDistancia() {
     } else if (planet1 === "La gran muralla de Hércules" && planet2 === "Supercúmulo galáctico Laniakea") {
         distancia = 1003; // Distancia promedio en millones de años luz
     }
-
     document.getElementById("resultado").innerHTML = 'La distancia calculada es: ' + distancia + ' años luz.';
 }
 /* ---------------------------------------- BOTON RAMDOM ---------------------------------------- */
@@ -170,3 +169,14 @@ document.getElementById("randomButton").addEventListener("click", function () {
 
     window.location.href = randomPage;
 });
+/* ---------------------------------------- CLOSE ---------------------------------------- */
+function changeIconAndGoBack() {
+    var icon = document.getElementById("icon");
+    icon.classList.toggle("bi-x-circle-fill");
+    icon.classList.toggle("bi bi-x-circle");
+    goBack();
+}
+
+function goBack() {
+    window.history.back();
+}

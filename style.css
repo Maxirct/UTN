@@ -5,11 +5,17 @@
     font-family: inter;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     background-color: #1c1c1c;
     display: flex;
     flex-direction: column;
 }
+
 
 /*---------------------------------------- barra de navegacion ---------------------------------------- */
 nav {
@@ -408,6 +414,7 @@ h1 {
 
 
 .tituloCalculadora {
+    color: #1c1c1c;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -435,7 +442,8 @@ h1 {
 .selectorDistancia2 {
     width: 100%;
     padding: 8px;
-    border: 1px solid #fff;
+    border: 1px solid #753cd1;
+    background-color: #753cd134;
     border-radius: 4px;
 }
 
@@ -454,10 +462,6 @@ h1 {
 }
 
 .resultado {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
     text-align: center;
     font-family: open sans black;
     color: #c6ee36;
@@ -466,7 +470,7 @@ h1 {
 
 /* ---------------------------------------- HTML PLANETAS ---------------------------------------- */
 .tituloplanetas {
-    margin-top: 5%;
+    margin-top: 15px;
     font-family: inter black;
     text-align: center;
     color: #c6ee36;
@@ -546,6 +550,7 @@ h1 {
     margin: auto;
     width: 95%;
     height: 500px;
+    margin-bottom: 50px;
 }
 
 .planetas img {
@@ -645,14 +650,17 @@ h6 {
 
 /*---------------------------------------- FOOTER ----------------------------------------*/
 .footer {
+    position: relative;
     text-align: center;
     height: 300px;
+    bottom: 0;
 }
 
 .containerfooter {
+    justify-content: center;
+    flex: 1;
     height: 100%;
     margin: 0 auto;
-    justify-content: center;
     background-color: #000;
 }
 
@@ -926,4 +934,110 @@ ul {
 .col-lg-12 {
     color: #fff !important;
 
+}
+
+/*----------------------------- perfil -----------------------------*/
+.close-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #d7ff47;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #9747ff;
+}
+
+.mainperfil {
+    margin: auto;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    background-color: #753cd1;
+    border-radius: 25px;
+}
+
+#chk {
+    display: none;
+}
+
+.signup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.labelperfil {
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.inputperfil {
+    width: 60%;
+    height: 50px;
+    background: #f7f7f7;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.buttonperfil {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #1c1c1c;
+    background: #c6ee36;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.buttonperfil:hover {
+    background: #d8fd70;
+}
+
+.login {
+    height: 460px;
+    background: #fff;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.login label {
+    color: #753cd1;
+    transform: scale(.6);
+}
+
+#chk:checked~.login {
+    transform: translateY(-500px);
+}
+
+#chk:checked~.login label {
+    transform: scale(1);
+}
+
+#chk:checked~.signup label {
+    transform: scale(.6);
 }

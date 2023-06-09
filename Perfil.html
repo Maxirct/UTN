@@ -14,49 +14,29 @@
 </head>
 
 <body>
-    <nav>
-        <a class="logo-nav" href="index.html"><img src="imagenes/img+text-04.png" alt="logo" width="130px"
-                height="80px"></a>
-        <div class="links">
-            <a href="imagenes.html">Imagenes</a>
-            <a href="videos.html">Videos</a>
-            <a href="descubrimientos.html">Descubrimientos</a>
-            <div class="dropdown">
-                <button class="dropbtn">Sistema Solar &#9662;</button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li><a href="planetas.html">Planetas</a></li>
-                        <li><a href="calculadora.html">Calculadora de distancias</a></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="#">Perfil</a>
-        </div>
-    </nav><br>
-    <!--------------------------------------- FOOTER --------------------------------------->
-    <footer class="footer">
-        <div class="containerfooter">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>Fuentes</h4>
-                    <ul>
-                        <li><a href="https://www.nasa.gov/" target="_blank">NASA</a></li>
-                        <li><a href="https://www.esa.int/" target="_blank">ESA</a></li>
-                        <li><a href="https://global.jaxa.jp/" target="_blank">JAXA</a></li>
-                        <li><a href="https://www.spacex.com/" target="_blank">SpaceX</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Seguinos</h4>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="bi bi-twitter"></i></a>
-                        <a href="https://www.linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+    <button class="close-button" onclick="changeIconAndGoBack()"><i class="bi bi-x-circle-fill" id="icon"></i></button>
 
-</html>
+    <div class="mainperfil">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <div class="signup">
+            <form>
+                <label class="labelperfil" for="chk" aria-hidden="true">Inicia</label>
+                <input class="inputperfil" type="text" name="txt" placeholder="Nombre de usuario" required="">
+                <input class="inputperfil" type="email" name="email" placeholder="Email" required="">
+                <input class="inputperfil" type="password" name="pswd" placeholder="Contraseña" required="">
+                <button class="buttonperfil">Inicia sesión</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form>
+                <label class="labelperfil" for="chk" aria-hidden="true">Regístrate</label>
+                <input class="inputperfil" type="email" name="email" placeholder="Email" required="">
+                <input class="inputperfil" type="password" name="pswd" placeholder="Contraseña" required="">
+                <button class="buttonperfil">Regístrarme</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
