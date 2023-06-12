@@ -1,3 +1,5 @@
+/* ---------------------------------------- CALCULADORA ---------------------------------------- */
+
 function calcularDistancia() {
     var planet1 = document.getElementById("distancia1").value;
     var planet2 = document.getElementById("distancia2").value;
@@ -171,12 +173,27 @@ document.getElementById("randomButton").addEventListener("click", function () {
 });
 /* ---------------------------------------- CLOSE ---------------------------------------- */
 function changeIconAndGoBack() {
+    console.log("changeIconAndGoBack() llamada");
     var icon = document.getElementById("icon");
     icon.classList.toggle("bi-x-circle-fill");
-    icon.classList.toggle("bi bi-x-circle");
+    icon.classList.toggle("bi-x-circle");
     goBack();
 }
 
+
 function goBack() {
     window.history.back();
+}
+/* ---------------------------------------- ERROR PERFIL ---------------------------------------- */
+
+function validateSignup() {
+    var usernameInput = document.getElementById("signup-username");
+    var emailInput = document.getElementById("signup-email");
+    var passwordInput = document.getElementById("signup-password");
+
+    if (!usernameInput.value || !emailInput.value || !passwordInput.value) {
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
+    alert
 }
